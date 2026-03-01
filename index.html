@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sustainability Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="header">
+    Sustainability Monitoring Dashboard
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li data-section="dashboard" class="active">Dashboard</li>
+            <li data-section="energy">Energy Details</li>
+            <li data-section="water">Water Details</li>
+            <li data-section="alerts">Alerts</li>
+            <li data-section="settings">Settings</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="section active">
+
+            <div class="card">
+                <h2>⚡ Energy Usage</h2>
+                <canvas id="energyChart" height="120"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>💧 Water Usage</h2>
+                <canvas id="waterChart" height="120"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Sustainability Score</h3>
+                <p id="ecoScore"></p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Tomorrow Prediction</h3>
+                <ul id="prediction"></ul>
+            </div>
+
+            <div class="card">
+                <h3>💡 AI Weekly Analysis & Recommendations</h3>
+                <div id="aiAnalysis"></div>
+            </div>
+
+        </div>
+
+        <!-- ENERGY -->
+        <div id="energy" class="section">
+            <div class="card">
+                <h2>⚡ Detailed Energy Report</h2>
+                <p>Peak usage observed during 2PM – 5PM.</p>
+                <p>Weekly trend increasing.</p>
+            </div>
+        </div>
+
+        <!-- WATER -->
+        <div id="water" class="section">
+            <div class="card">
+                <h2>💧 Detailed Water Report</h2>
+                <p>Water consumption spike in hostel block.</p>
+            </div>
+        </div>
+
+        <!-- ALERTS -->
+        <div id="alerts" class="section">
+            <div class="card alert-card">
+                <h2>⚠ System Alerts</h2>
+                <ul id="alertList"></ul>
+            </div>
+        </div>
+
+        <!-- SETTINGS -->
+        <div id="settings" class="section">
+            <div class="card">
+                <h2>⚙ System Settings</h2>
+
+                <label>Energy Alert Threshold</label><br>
+                <input type="number" id="energyThreshold" value="160"><br><br>
+
+                <label>Water Alert Threshold</label><br>
+                <input type="number" id="waterThreshold" value="930"><br><br>
+
+                <label>
+                    <input type="checkbox" id="alertsToggle" checked>
+                    Enable Alerts
+                </label><br><br>
+
+                <button onclick="applySettings()">Apply Settings</button>
+                <button onclick="simulateSpike()">Simulate Energy Spike</button>
+                <button onclick="resetSystem()">Reset System</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
