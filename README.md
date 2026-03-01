@@ -27,6 +27,9 @@ Usage Data → AI Analysis Engine → Dashboard Insights → Alerts & Recommenda
 - JavaScript
 - Chart.js
 
+## System Architecture
+Data Input → AI Analysis Engine → Dashboard → Alerts & Recommendations → Administrative Action
+
 ## AMD Relevance
 The system can be optimized for AMD processors to efficiently run AI inference workloads in smart campus environments.
 
