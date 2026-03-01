@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #111;
+    color: white;
+}
+
+.header {
+    background: #1B5E20;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #1c1c1c;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    color: #00C853;
+    font-weight: bold;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.alert-card {
+    background: #2a1414;
+}
+
+#alertList li {
+    color: #FF5252;
+    font-weight: bold;
+    background: rgba(255, 82, 82, 0.1);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-left: 4px solid #FF5252;
+}
+
+input[type="number"] {
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    margin-top: 8px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    background: #00C853;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
